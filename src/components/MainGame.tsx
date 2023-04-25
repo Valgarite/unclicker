@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 
-
 function save(datos: SaveData) {
     localStorage.setItem('clicks', JSON.stringify(datos));
 }
@@ -20,8 +19,8 @@ function load(){
     }
 }
 
-function Click(){
-    const loadedData = load()
+function MainGame(){
+    load()
     const [clicks, setClicks] = useState(0);
 
     useEffect(() => {
@@ -43,7 +42,7 @@ function Click(){
         const saveData: SaveData = { clicks: 0 };
         save(saveData) //autosave lol
     }
-    
+   
     return(
     <>
         <button onClick={progresar}>click!</button>
@@ -53,4 +52,4 @@ function Click(){
     )
 }
 
-export default Click;
+export default MainGame;
