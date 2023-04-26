@@ -1,6 +1,7 @@
 function Gacha(){
     return(
         <>
+        <button>Crear</button>
         <p>gl</p>
         </>
     )
